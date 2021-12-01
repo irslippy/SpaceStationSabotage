@@ -671,6 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7695921198452365705}
   - component: {fileID: 4521651489867255356}
+  - component: {fileID: 1042712087955515120}
   m_Layer: 0
   m_Name: handcannon
   m_TagString: Untagged
@@ -715,6 +716,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9419146, y: 2.96859, z: 2.7512667}
   m_Center: {x: 0.04269119, y: -0.14480379, z: 0.08379907}
+--- !u!114 &1042712087955515120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7027505628429321011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ac472f8f784e249833723a73a3fa38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootReference: {fileID: 3075124372212613993, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  powercell: {fileID: 0}
+  allowInvoke: 0
 --- !u!1 &7495712091635476815
 GameObject:
   m_ObjectHideFlags: 0
