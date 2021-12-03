@@ -51,20 +51,7 @@ public class AttackPlayer : MonoBehaviour
 
         
     }
-    // adds shot cooldown 
-    /*private void FixedUpdate()
-    {
-        if (detected)
-        {
-            timeBetweenShots -= Time.deltaTime;
-
-            if (timeBetweenShots < 0)
-            {
-                ShootPlayer();
-                timeBetweenShots = originalTime;
-            }
-        }
-    }*/
+    
 
     //detects if player is within range of turret [engage attack mode]
     private void OnTriggerEnter(Collider other)

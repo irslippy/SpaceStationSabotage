@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class Destructible : MonoBehaviour
@@ -20,7 +17,7 @@ public class Destructible : MonoBehaviour
 
     public void DestroyEnemy()
     {
-        Debug.Log("enemy destroyed");
+       // Debug.Log("enemy destroyed");
         //instantly replaces existing turret with destroyed variant that falls to pieces when destroyed
         Instantiate(destroyedVersion, transform.position, transform.rotation);
         Destroy(gameObject);

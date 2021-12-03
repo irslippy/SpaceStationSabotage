@@ -855,7 +855,7 @@ MonoBehaviour:
   explosionEffect: {fileID: 0}
   blastRadius: 2.53
   explosionForce: 204.58
-  upForce: 7.13
+  upForce: 0.6
 --- !u!1 &6260104419856147336
 GameObject:
   m_ObjectHideFlags: 0

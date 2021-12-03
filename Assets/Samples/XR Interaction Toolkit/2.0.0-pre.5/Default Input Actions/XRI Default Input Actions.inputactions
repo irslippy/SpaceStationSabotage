@@ -1087,7 +1087,7 @@
             ]
         },
         {
-            "name": "CustomActionMap",
+            "name": "Trigger",
             "id": "1e592c29-b49c-42e9-ad93-216fbf70c229",
             "actions": [
                 {
@@ -1104,10 +1104,10 @@
                 {
                     "name": "",
                     "id": "2e8ee5c1-2a1c-4887-a583-83a6b96237d2",
-                    "path": "<OculusTouchController>/triggerPressed",
+                    "path": "<XRController>/triggerPressed",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "FireWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
