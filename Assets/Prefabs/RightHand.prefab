@@ -46,6 +46,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: handcannon
       objectReference: {fileID: 0}
+    - target: {fileID: 7479870563766807610, guid: b4981a14e0fa0504893388774aef4d41, type: 3}
+      propertyPath: shootAction
+      value: 
+      objectReference: {fileID: -5684558904543120851, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
     - target: {fileID: 7695921198452365705, guid: b4981a14e0fa0504893388774aef4d41, type: 3}
       propertyPath: m_RootOrder
       value: 0

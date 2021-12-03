@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
     void PauseGame()
     {
         Time.timeScale = 0;
-        Instantiate(DeathUI, DeathUILocation.transform.position, DeathUILocation.transform.rotation);
+        //Instantiate(DeathUI, DeathUILocation.transform.position, DeathUILocation.transform.rotation);
         //  deathTablet.LookAt(playerCamera.transform);      (FIX LATER)
     }
     //reduces health and updates health bar
