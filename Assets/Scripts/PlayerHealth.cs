@@ -12,10 +12,18 @@ public class PlayerHealth : MonoBehaviour
     [Header("On Death")]
     public GameObject deathMessage;
     public GameObject deathTablet;
-    
+  
     public GameObject DeathUI;
     public GameObject DeathUILocation;
 
+    public AudioSource source;
+    public AudioClip deathSFX;
+    bool isDead = false;
+
+    void Awake()
+    {
+        source.GetComponent<AudioSource>();
+    }
     //Sets player health to max amount
     void Start()
     {
@@ -24,6 +32,8 @@ public class PlayerHealth : MonoBehaviour
 
         CurrentHealth = PlayerMaxHealth;
         healthBar.SetMaxValue(PlayerMaxHealth);
+
+        source.clip = deathSFX;
 
     }
 
@@ -34,8 +44,6 @@ public class PlayerHealth : MonoBehaviour
         {
             deathMessage.SetActive(true);
             deathTablet.SetActive(true);
-          
-            
 
             //this pauses the game giving the player the chance to interact with the UI
             PauseGame();
@@ -56,7 +64,12 @@ public class PlayerHealth : MonoBehaviour
     {
         Time.timeScale = 0;
         //Instantiate(DeathUI, DeathUILocation.transform.position, DeathUILocation.transform.rotation);
-        //  deathTablet.LookAt(playerCamera.transform);      (FIX LATER)
+        //  deathTablet.LookAt(playerCamera.transform); (FIX LATER)
+        if (isDead == false)
+        {
+            source.PlayOneShot(deathSFX);
+            isDead = true;
+        }
     }
     //reduces health and updates health bar
     void TakeDamage(int damage)

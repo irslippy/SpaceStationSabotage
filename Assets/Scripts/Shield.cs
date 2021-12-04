@@ -5,20 +5,35 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
+    //shield integrity stats
     [Header("Shield Stats")]
     public int ShieldMaxHealth = 100;
     public int CurrentHealth;
-
+    //UI
     public ShieldBar shieldBar;
-
+    //instantiate broken shield on shield break
     [Header("Alternate Version")]
     public GameObject destroyedVersion;
+    //sounds :D
+    [Header("SFX")]
+    public AudioSource source;
+    public AudioClip[] soundEffects;
+    public AudioClip brokenShieldSound;
+    bool sfxHasPlayed = false;
+    bool shieldBroken = false;
 
-    //Sets shield health to max amount
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
+    //Sets shield health to max amount and randomizes first shield hit sfx
     void Start()
     {
         CurrentHealth = ShieldMaxHealth;
         shieldBar.SetMaxValue(ShieldMaxHealth);
+        source.clip = soundEffects[Random.Range(0, soundEffects.Length)];
+
 
     }
 
@@ -28,7 +43,7 @@ public class Shield : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             Instantiate(destroyedVersion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            Destroy(gameObject);            
         }
     }
     //detects collision with turret projectile and applies health reduction
@@ -39,7 +54,26 @@ public class Shield : MonoBehaviour
           //  Debug.Log("shield hit");
             TakeDamage(10);
 
+            ShieldHit();
+
+            //plays random audio clip once on entry
+            if (sfxHasPlayed == false)
+            {
+                source.PlayOneShot(source.clip);
+                sfxHasPlayed = true;
+            }
+
         }
+
+    }
+    //tracks projectile leaving hitbox and resets random hit sfx 
+    public void OnTriggerExit(Collider SpyderBullet)
+    {
+        if (SpyderBullet.gameObject.tag == "Enemy")
+        {
+            sfxHasPlayed = false;
+        }
+
 
     }
     //reduces health and updates health bar
@@ -49,6 +83,19 @@ public class Shield : MonoBehaviour
         shieldBar.SetStat(CurrentHealth);
     }
 
+    //plays broken shield sound effect 
+    void PlayBreakSFX()
+    {
+        if (CurrentHealth <= 0 && shieldBroken == true)
+        {
+            source.PlayOneShot(brokenShieldSound);
+            shieldBroken = false;
+        }
+    }
 
-
+    //randomizes the next hit sound effect everytime it is hit
+    void ShieldHit()
+    {
+        source.clip = soundEffects[Random.Range(0, soundEffects.Length)];
+    }
 }

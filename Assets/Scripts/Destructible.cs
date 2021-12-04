@@ -3,8 +3,10 @@ using UnityEngine;
 public class Destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
+    
 
-
+    
+    //detects collision of player projectile on turret and destroys turret
     public void OnTriggerEnter(Collider enemy)
     {
         if (enemy.gameObject.tag == "PlayerProjectile")

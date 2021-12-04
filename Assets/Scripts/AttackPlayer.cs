@@ -24,9 +24,20 @@ public class AttackPlayer : MonoBehaviour
     float originalTime;
     public Vector3 currentRotation;
 
+    //sounds
+    [Header("SFX")]
+    public AudioSource source;
+    public AudioClip[] SFXArray;
+    private bool sfxHasPlayed = false;
+    
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
     //resets timeBetweenShots to desired value
     private void Start()
     {
+        source.clip = SFXArray[Random.Range(0, SFXArray.Length)];
         originalTime = timeBetweenShots;
         Physics.IgnoreLayerCollision(7, 6);
     }
@@ -36,10 +47,11 @@ public class AttackPlayer : MonoBehaviour
     {
         if (detected)
         {
+
             pivotPoint.LookAt(target.transform);
             currentRotation = new Vector3(currentRotation.x, currentRotation.y, currentRotation.z % 360f);
             this.transform.eulerAngles = currentRotation;
-           
+
             timeBetweenShots -= Time.deltaTime;
 
             if (timeBetweenShots < 0)
@@ -47,12 +59,9 @@ public class AttackPlayer : MonoBehaviour
                 ShootPlayer();
                 timeBetweenShots = originalTime;
             }
-        }
 
-        
+        }     
     }
-    
-
     //detects if player is within range of turret [engage attack mode]
     private void OnTriggerEnter(Collider other)
     {
@@ -60,6 +69,13 @@ public class AttackPlayer : MonoBehaviour
         {
             detected = true;
             target = other.gameObject;
+
+            //plays random audio clip once on entry
+            if (sfxHasPlayed == false)
+            {
+                source.PlayOneShot(source.clip);
+                sfxHasPlayed = true;
+            }
         }
     }
 
@@ -69,7 +85,7 @@ public class AttackPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             detected = false;
-            target = other.gameObject;
+            target = other.gameObject;          
         }
     }
 

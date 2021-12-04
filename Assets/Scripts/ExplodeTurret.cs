@@ -11,8 +11,15 @@ public class ExplodeTurret : MonoBehaviour
     public float blastRadius;
     public float explosionForce = 700f;
     public float upForce = 1.0f;
+    [Header("Sound Effects")]
+    public AudioSource source;
+    public AudioClip explosionSFX;
     private bool hasExploded = false;
     
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
     void Start()
     {
         //detonate called in start because object containing Detonate() function
@@ -22,8 +29,10 @@ public class ExplodeTurret : MonoBehaviour
         if (TurretPowerCell == enabled && hasExploded == false)
         {
             Detonate();
-            hasExploded = true;
+            
         }
+
+        source.clip = explosionSFX;
         
     }
     
@@ -45,6 +54,12 @@ public class ExplodeTurret : MonoBehaviour
             }
         }
         Destroy(gameObject);
+        //plays explosion sfx
+        if (hasExploded == false)
+        {
+            source.PlayOneShot(explosionSFX);
+            hasExploded = true;
+        }
     }
 
 }
