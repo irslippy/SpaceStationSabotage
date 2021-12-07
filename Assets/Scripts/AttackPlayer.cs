@@ -27,7 +27,8 @@ public class AttackPlayer : MonoBehaviour
     //sounds
     [Header("SFX")]
     public AudioSource source;
-    public AudioClip[] SFXArray;
+    public AudioClip[] voiceLines;
+    
     private bool sfxHasPlayed = false;
     
     void Awake()
@@ -37,7 +38,7 @@ public class AttackPlayer : MonoBehaviour
     //resets timeBetweenShots to desired value
     private void Start()
     {
-        source.clip = SFXArray[Random.Range(0, SFXArray.Length)];
+        source.clip = voiceLines[Random.Range(0, voiceLines.Length)]; 
         originalTime = timeBetweenShots;
         Physics.IgnoreLayerCollision(7, 6);
     }
@@ -98,4 +99,5 @@ public class AttackPlayer : MonoBehaviour
         
     }
 
+    
 }

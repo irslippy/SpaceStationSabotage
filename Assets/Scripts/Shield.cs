@@ -27,7 +27,7 @@ public class Shield : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    //Sets shield health to max amount and randomizes first shield hit sfx
+    //Sets shield health to max amount and randomizes first sh
     void Start()
     {
         CurrentHealth = ShieldMaxHealth;
