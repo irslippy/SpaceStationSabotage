@@ -44,7 +44,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 48.29
+  m_Radius: 80
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6034357694882490616
 MonoBehaviour:
@@ -65,7 +65,13 @@ MonoBehaviour:
   timeBetweenShots: 2.09
   currentRotation: {x: 0, y: 0, z: 0}
   source: {fileID: 5571333051325120219}
-  SFXArray: []
+  voiceLines:
+  - {fileID: 8300000, guid: 144b1d9d223618749baf1bbe6954a312, type: 3}
+  - {fileID: 8300000, guid: d5ff18b07a04aa84cad52e3cb0fc874f, type: 3}
+  - {fileID: 8300000, guid: a8cfe14f2638e294cbe4eedc883274f0, type: 3}
+  - {fileID: 8300000, guid: 3795e865005a8fd4996aecb7fab6004b, type: 3}
+  - {fileID: 8300000, guid: 6c096c2135cccca4fa5f0c7405a374dd, type: 3}
+  - {fileID: 8300000, guid: 6b24d7fb12f620542be37c02571cd91f, type: 3}
 --- !u!82 &5571333051325120219
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33184,8 +33190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 3573435869720217711, guid: 6f9eb0d472908c04da3ad437982473f0, type: 3}
-  source: {fileID: 0}
-  explosionSFX: {fileID: 0}
 --- !u!65 &57865475044402672
 BoxCollider:
   m_ObjectHideFlags: 0

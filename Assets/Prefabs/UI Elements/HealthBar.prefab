@@ -86,7 +86,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921762749484793302}
-  m_Text: YOU ARE DEAD!
+  m_Text: MISSION FAILED!
   m_OffsetZ: -26.21
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -277,7 +277,7 @@ RectTransform:
   m_GameObject: {fileID: 6812603731344506369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.84524995, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.28992072, y: 0.2401, z: 0.2401}
   m_Children:
   - {fileID: 6812603730559344587}
   - {fileID: 6812603730781185495}
