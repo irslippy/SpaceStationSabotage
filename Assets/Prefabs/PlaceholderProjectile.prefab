@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7556417212005997346}
   - component: {fileID: 7556417212005997357}
   - component: {fileID: 5466890324565239335}
-  - component: {fileID: 3668880500471417107}
+  - component: {fileID: -6041930152528162124}
   m_Layer: 0
   m_Name: PlaceholderProjectile
   m_TagString: Enemy
@@ -109,7 +109,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
@@ -210,7 +210,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3668880500471417107
+--- !u!114 &-6041930152528162124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,14 +219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7556417212005997356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1fd9410956b6944bb3df2c2b27ab1da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1de14d1f999cb664086ed8aec53292fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSFX:
-  - {fileID: 8300000, guid: 9712c9cded807c14cbc515a402090d99, type: 3}
-  - {fileID: 8300000, guid: 95be65aae10bfd342854a49ea14023b9, type: 3}
-  - {fileID: 8300000, guid: 8a5824f2e8e2c7540ab0db91e0760014, type: 3}
-  - {fileID: 8300000, guid: 35a0a83852eb11d4eabd7b4059551b53, type: 3}
-  - {fileID: 8300000, guid: 4312c1c50fe0f70448e9503b7535d653, type: 3}
-  - {fileID: 8300000, guid: 77badf46dc339e1448dbde846beaf5a2, type: 3}
-  source: {fileID: 5466890324565239335}
+  shotVelocity: 25

@@ -6,7 +6,7 @@ public class AttackPlayer : MonoBehaviour
 {
     //detects player within attack zone
     bool detected;
-    GameObject target;
+    public GameObject target;
    
 
     //point of which the turret rotates around
@@ -19,7 +19,6 @@ public class AttackPlayer : MonoBehaviour
     public Transform projectileSpawner;
 
     // turret bullet variables
-    public float shotVelocity = 10f;
     public float timeBetweenShots = 1.3f;
     float originalTime;
     public Vector3 currentRotation;
@@ -66,7 +65,7 @@ public class AttackPlayer : MonoBehaviour
     //detects if player is within range of turret [engage attack mode]
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "GameController")
         {
             detected = true;
             target = other.gameObject;
@@ -83,7 +82,7 @@ public class AttackPlayer : MonoBehaviour
     //detects if player has left range [engage passive mode]
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "GameController")
         {
             detected = false;
             target = other.gameObject;          
@@ -94,8 +93,6 @@ public class AttackPlayer : MonoBehaviour
     private void ShootPlayer()
     {
         GameObject currentBullet = Instantiate(turretProjectile, projectileSpawner.position, projectileSpawner.rotation);
-        Rigidbody rb = currentBullet.GetComponent<Rigidbody>();
-        rb.AddRelativeForce(projectileSpawner.transform.forward * shotVelocity, ForceMode.VelocityChange);
         
     }
 

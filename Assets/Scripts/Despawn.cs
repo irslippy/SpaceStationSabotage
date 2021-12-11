@@ -5,12 +5,16 @@ using UnityEngine;
 public class Despawn : MonoBehaviour
 {
     [Header("Time in seconds")]
-    public float despawnTime = 2.0f; //This implies a delay of 2 seconds.
+    public float timeRemaining = 10; //implies a countdown of seconds until despawn
 
-    private void Start()
+    void Update()
     {
-        despawnTime = Time.deltaTime;
-        if (despawnTime >= 0)
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+
+        else
         {
             Destroy(gameObject);
         }

@@ -98,4 +98,14 @@ public class Shield : MonoBehaviour
     {
         source.clip = soundEffects[Random.Range(0, soundEffects.Length)];
     }
+
+    private void OnCollision (Collider collider)
+    {
+        if (collider.gameObject.tag == "GameController")
+        {
+            Physics.IgnoreCollision(collider, GetComponent<Collider>());
+        }
+    }
+        
+    
 }
