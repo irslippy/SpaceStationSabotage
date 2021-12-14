@@ -703,7 +703,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7893841376815214080}
   - component: {fileID: 4143816832523467189}
-  - component: {fileID: 6957005632210181043}
   m_Layer: 0
   m_Name: handcannon
   m_TagString: Untagged
@@ -748,21 +747,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9419146, y: 2.96859, z: 2.7512667}
   m_Center: {x: 0.04269119, y: -0.14480379, z: 0.08379907}
---- !u!114 &6957005632210181043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405991759205479610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35ac472f8f784e249833723a73a3fa38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LiveProjectile: {fileID: 4338125882593925458, guid: f2e9542a6f3d9114b87c536f09923881, type: 3}
-  shootAction: {fileID: -5684558904543120851, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  launchPostition: {fileID: 8911631911443459103}
 --- !u!1 &7611723315614389793
 GameObject:
   m_ObjectHideFlags: 0

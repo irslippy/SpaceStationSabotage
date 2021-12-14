@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,12 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public Transform playerCamera;
 
 
-    [Header("On Death")]
-    public GameObject deathMessage;
-    public GameObject deathTablet;
   
-    public GameObject DeathUI;
-    public GameObject DeathUILocation;
 
     public AudioSource source;
     public AudioClip deathSFX;
@@ -27,8 +23,7 @@ public class PlayerHealth : MonoBehaviour
     //Sets player health to max amount
     void Start()
     {
-        deathMessage.SetActive(false);
-        deathTablet.SetActive(false);
+       
 
         CurrentHealth = PlayerMaxHealth;
         healthBar.SetMaxValue(PlayerMaxHealth);
@@ -41,12 +36,9 @@ public class PlayerHealth : MonoBehaviour
     private void Update()
     {
         if (CurrentHealth <= 0)
-        {
-            deathMessage.SetActive(true);
-            deathTablet.SetActive(true);
-
-            //this pauses the game giving the player the chance to interact with the UI
-            PauseGame();
+        { 
+            //this pauses the game giving momentarily before going to death scene
+            EndGame();
         }
     }
     //detects collision with turret projectile and applies health reduction
@@ -60,11 +52,10 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void PauseGame()
+    void EndGame()
     {
-        Time.timeScale = 0;
-        //Instantiate(DeathUI, DeathUILocation.transform.position, DeathUILocation.transform.rotation);
-        //  deathTablet.LookAt(playerCamera.transform); (FIX LATER)
+        
+        SceneManager.LoadScene(2);
         if (isDead == false)
         {
             source.PlayOneShot(deathSFX);

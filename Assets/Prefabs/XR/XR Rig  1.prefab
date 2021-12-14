@@ -1380,10 +1380,6 @@ MonoBehaviour:
   CurrentHealth: 0
   healthBar: {fileID: 0}
   playerCamera: {fileID: 8380071169623346670}
-  deathMessage: {fileID: 0}
-  deathTablet: {fileID: 768795452630258082}
-  DeathUI: {fileID: 968760971278164690}
-  DeathUILocation: {fileID: 0}
   source: {fileID: 2448016230146402467}
   deathSFX: {fileID: 8300000, guid: f52f12ce274e3fc4682bd1ade0ac2a6e, type: 3}
 --- !u!54 &8380071169623346671
@@ -1623,18 +1619,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90306fffd45d31d46ba696828cc3d352, type: 3}
---- !u!1 &768795452630258082 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9142502064566491972, guid: 90306fffd45d31d46ba696828cc3d352, type: 3}
-  m_PrefabInstance: {fileID: 8380071169964149478}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2315124050694538782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6082963807014489336, guid: 90306fffd45d31d46ba696828cc3d352, type: 3}
-  m_PrefabInstance: {fileID: 8380071169964149478}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &968760971278164690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8735369933358671924, guid: 90306fffd45d31d46ba696828cc3d352, type: 3}
   m_PrefabInstance: {fileID: 8380071169964149478}
   m_PrefabAsset: {fileID: 0}

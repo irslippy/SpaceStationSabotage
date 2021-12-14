@@ -270,9 +270,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0
-  MaxDistance: 24.8
+  MaxDistance: 25.13
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -290,12 +290,12 @@ AudioSource:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.69384766
+      inSlope: -0.3636928
+      outSlope: -0.3636928
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.3257143
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -453,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 2643679976795598988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.193, y: -0.13, z: -2.1037}
-  m_LocalScale: {x: 0.07956, y: 0.07956, z: 0.07956}
+  m_LocalScale: {x: 0.17270884, y: 0.17270884, z: 0.17270884}
   m_Children:
   - {fileID: 1271267433258436583}
   - {fileID: 2252559108494441874}
@@ -463,7 +463,7 @@ Transform:
   - {fileID: 4396226933439449728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 153.713, z: 0}
 --- !u!114 &8681172047748908956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2643679976795598988}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 12.491805, y: 10.387438, z: 14.421166}
@@ -599,7 +599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4394408706939341083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.015, y: 7.82, z: 4.71}
+  m_LocalPosition: {x: 0.015, y: 8.93, z: 4.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5062316724671799970}
@@ -616,7 +616,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 56.99
+  m_Radius: 96.57839
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5168470532589848495
 GameObject:

@@ -7,7 +7,7 @@ public class PlayerProjectile : MonoBehaviour
 {
     public GameObject shootPoint;
     public float velocity;
-    public GameObject explosionVfx;
+    
 
     private void Start()
     {
@@ -22,7 +22,6 @@ public class PlayerProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(gameObject);
-        Instantiate(explosionVfx, gameObject.transform.position, gameObject.transform.rotation);
     }
 
 
