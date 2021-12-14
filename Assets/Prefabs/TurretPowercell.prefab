@@ -138,6 +138,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowercellGraph (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Name
+      value: SpawnRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Name
+      value: TrailLifeTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445191313961918447, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8561766405635086336, guid: e18632eea9714a74a9ce76c55a69c8de, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -235,7 +235,7 @@ MonoBehaviour:
   ShieldMaxHealth: 100
   CurrentHealth: 0
   shieldBar: {fileID: 0}
-  destroyedVersion: {fileID: 5511340856531447035, guid: 658be7743b756934082d71203d4fe50a, type: 3}
+  destroyedVersion: {fileID: 7546483075615122160, guid: b1bb2920ab8b1b640af930a1db02f2c7, type: 3}
   source: {fileID: 5836958651792618619}
   soundEffects:
   - {fileID: 8300000, guid: 0f756ede19578914a9227ffa422c8577, type: 3}

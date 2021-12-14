@@ -239,7 +239,7 @@ MonoBehaviour:
   pivotPoint: {fileID: 2349742122288762520}
   turretProjectile: {fileID: 8319385616894316776, guid: f6a1900a369b7ab4f9ced7294d026729, type: 3}
   projectileSpawner: {fileID: 8092694892429575593}
-  timeBetweenShots: 1.3
+  timeBetweenShots: 0.5
   currentRotation: {x: 0, y: 0, z: 0}
   source: {fileID: 6052188451171428207}
   voiceLines:
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 3457616907250084406}
   - component: {fileID: 8681172047748908956}
   - component: {fileID: 1680411256121845201}
+  - component: {fileID: 937442622941479937}
   m_Layer: 0
   m_Name: 1spyder_turret 2
   m_TagString: Untagged
@@ -490,6 +491,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.491805, y: 10.387438, z: 14.421166}
   m_Center: {x: 0.1775306, y: 7.0786533, z: -0.05321865}
+--- !u!220 &937442622941479937
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643679976795598988}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: -0.66433966, y: 10.662963, z: 11.836941}
+  - {x: -10.2124605, y: 10.607689, z: -10.4623575}
+  - {x: 11.369281, y: 12.153481, z: 1.6805013}
+  - {x: 10.932504, y: 12.305225, z: -7.251847}
+  - {x: -13.6531515, y: 11.162952, z: 8.49349}
+  - {x: 1.2983296, y: 12.62821, z: -9.940591}
+  - {x: -14.533709, y: 11.497927, z: -0.75266546}
+  - {x: 10.47971, y: 12.069052, z: 10.3195715}
+  - {x: -763.8043, y: 18.695686, z: 59.753326}
+  - {x: -763.57025, y: 10.670237, z: 60.22752}
+  - {x: -0.66433966, y: 2.0597897, z: 11.836941}
+  - {x: -10.2124605, y: 2.0045154, z: -10.4623575}
+  - {x: 11.369281, y: 3.5503068, z: 1.6805013}
+  - {x: 10.932504, y: 3.7020516, z: -7.251847}
+  - {x: -13.6531515, y: 2.5597785, z: 8.49349}
+  - {x: 1.2983296, y: 4.0250354, z: -9.940591}
+  - {x: -14.533709, y: 2.8947525, z: -0.75266546}
+  - {x: 10.47971, y: 3.4658778, z: 10.3195715}
+  - {x: -763.8043, y: 10.092506, z: 59.753326}
+  - {x: -763.57025, y: 2.0670626, z: 60.22752}
+  m_Dering: 1
 --- !u!1 &2685747606662770587
 GameObject:
   m_ObjectHideFlags: 0

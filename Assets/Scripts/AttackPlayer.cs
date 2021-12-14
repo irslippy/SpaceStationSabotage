@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AttackPlayer : MonoBehaviour
 {
+    //the interval of frames in the update funtion that run code, currently set to every third frame
+    private int interval = 10;
+
     //detects player within attack zone
     bool detected;
     public GameObject target;
@@ -42,10 +45,10 @@ public class AttackPlayer : MonoBehaviour
         Physics.IgnoreLayerCollision(7, 6);
     }
 
-    // turret rotates to face player once player is in range
+    // turret rotates to face player once player is in range every 3 frames rather than every single frame because this function is taxing on the processor
     void Update()
     {
-        if (detected)
+        if (Time.frameCount % interval == 0 && detected)
         {
 
             pivotPoint.LookAt(target.transform);

@@ -121,7 +121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734549123820938055}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
   m_Name: 
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3412283744963321776}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
   m_Name: 
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3486605406486894456}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
   m_Name: 
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3800425229116228499}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
   m_Name: 
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3857304591709655382}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
   m_Name: 
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6260104419856147336}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
   m_Name: 
@@ -927,6 +927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619814892465603145}
   - component: {fileID: 974500010797384605}
+  - component: {fileID: 2489741063801147497}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -1044,6 +1045,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2489741063801147497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279637528465090306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a4a012f1b4eaf44acba9fcbcc505f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 10
 --- !u!1001 &8151308100931270361
 PrefabInstance:
   m_ObjectHideFlags: 0
