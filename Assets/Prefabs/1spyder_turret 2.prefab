@@ -967,6 +967,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4354110973263576752, guid: 9a488f250f905454fab04907918b0a64, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5779047662609238291, guid: 9a488f250f905454fab04907918b0a64, type: 3}
       propertyPath: m_Name
       value: TurretPowercell

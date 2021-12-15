@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackPlayer : MonoBehaviour
 {
     //the interval of frames in the update funtion that run code, currently set to every third frame
-    private int interval = 10;
+    private int interval = 3;
 
     //detects player within attack zone
     bool detected;
@@ -51,9 +51,9 @@ public class AttackPlayer : MonoBehaviour
         if (Time.frameCount % interval == 0 && detected)
         {
 
-            pivotPoint.LookAt(target.transform);
-            currentRotation = new Vector3(currentRotation.x, currentRotation.y, currentRotation.z % 360f);
-            this.transform.eulerAngles = currentRotation;
+            //pivotPoint.LookAt(target.transform);
+            //currentRotation = new Vector3(currentRotation.x, currentRotation.y, currentRotation.z % 360f);
+           // this.transform.eulerAngles = currentRotation;
 
             timeBetweenShots -= Time.deltaTime;
 
@@ -68,10 +68,10 @@ public class AttackPlayer : MonoBehaviour
     //detects if player is within range of turret [engage attack mode]
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "GameController")
-        {
-            detected = true;
-            target = other.gameObject;
+       // if (other.tag == "GameController")
+       // {
+           // detected = true;
+           // target = other.gameObject;
 
             //plays random audio clip once on entry
             if (sfxHasPlayed == false)
@@ -79,17 +79,17 @@ public class AttackPlayer : MonoBehaviour
                 source.PlayOneShot(source.clip);
                 sfxHasPlayed = true;
             }
-        }
+        //}
     }
 
     //detects if player has left range [engage passive mode]
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "GameController")
-        {
+        //if (other.tag == "GameController")
+        //{
             detected = false;
             target = other.gameObject;          
-        }
+       // }
     }
 
     // spawns turret bullet and adds force
